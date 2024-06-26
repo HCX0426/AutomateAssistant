@@ -1,0 +1,29 @@
+﻿<Application
+    x:Class="AutomateAssistant.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AutomateAssistant"
+    xmlns:pu="clr-namespace:Panuon.WPF.UI;assembly=Panuon.WPF.UI"
+    xmlns:pucore="clr-namespace:Panuon.WPF;assembly=Panuon.WPF"
+    xmlns:purs="clr-namespace:Panuon.WPF.UI.Resources;assembly=Panuon.WPF.UI" xmlns:com="clr-namespace:AutomateAssistant.Components">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <com:AppBootstrapper x:Key="AppBootstrapper" />
+
+                    <FontFamily x:Key="ProjectMIcon">/AutomateAssistant.UI;component/Resources/Fonts/#ProjectMIcon</FontFamily>
+
+                    <pu:GlobalSettings
+                        x:Key="globalSettings"
+                        FontFamily="Inter"
+                        FontSize="14"
+                        IconFontFamily="{StaticResource ProjectMIcon}"
+                        IconFontSize="16" />
+                </ResourceDictionary>
+                <ResourceDictionary Source="/AutomateAssistant.UI;component/Collections.xaml" />
+                <ResourceDictionary Source="/AutomateAssistant.UI;component/Themes/Light.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
